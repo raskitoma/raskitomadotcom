@@ -5,7 +5,22 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Raleway", sans-serif;
+  min-height: 100vh;
+  background-image: linear-gradient(#000000 0px, #000000 10%,#f0fff4 20%,#f0fff4 30%,#00c535 40%,#00c535 50%,#ffc31f 60%,#ffc31f 70%,#00eeff 80%, #000000 100%);
+}
+
+.txtcaveat {
+  font-family: "Caveat", cursive;
+}
+
+.txtroboto {
+  font-family: "Roboto", sans-serif;
+}
+
+.masterlogo {
+  width: auto;
+  max-height: 24px;
 }
 
 .intro {
@@ -13,8 +28,8 @@ body {
 }
 
 .intro video {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: auto;
   object-fit: cover;
 }
 
@@ -23,8 +38,15 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 70px;
+  font-size: 60px;
   color: white;
+  z-index: 99999;
+}
+
+.whoamix {
+  margin: auto;
+  text-align: center;  
+  color: rgb(0, 0, 0);
 }
 
 section {
@@ -37,10 +59,6 @@ section h1 {
   font-size: 70px;
 }
 
-section .projects {
-  margin-left: 50px;
-}
-
 section .projects div {
   max-width: 540px;
 }
@@ -51,24 +69,9 @@ section .space-me {
 
 section .projectimg {
   fill-opacity: inherit;
-  margin: auto;
+  width: 150px;
+  height: auto;
 }
-
-section .bgcolsc01 {
-  background: rgb(255,255,255);
-  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(0,255,16,1) 10%, rgba(0,255,16,1) 90%, rgba(255,255,255,0.9948573179271709) 100%);
-}
-
-section .bgcolsc02 {
-  background: rgb(255,255,255);
-  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(196,196,196,1) 10%, rgba(196,196,196,1) 90%, rgba(255,255,255,0.9948573179271709) 100%);
-}
-
-section .bgcolsc03 {
-  background: rgb(2,0,36);
-  background: linear-gradient(270deg, rgba(2,0,36,1) 0%, rgba(0,0,119,1) 15%, rgba(229,251,255,0.9948573179271709) 100%);
-}
-
 
 section .sectionspacer {
   padding-top: 100px;
@@ -88,12 +91,12 @@ section h1 {
   be relative to this element */
   position: relative;
 
-  /* width: 400px; */
-   height: 1080px;
+   width: auto !important;
+   height: 100vh !important;
 
   /* Will not allow the video to overflow the 
   container */
-  overflow: hidden;
+  overflow: auto;
 
   /* Centering the container's content vertically 
   and horizontally */
@@ -115,15 +118,56 @@ padding: 10px;
 video {
   /** Simulationg background-size: cover */
   object-fit: cover;
-  height: 100%;
-  width: 100%;
+  height: 100vh !important;
+  width: 100% !important;
 
   position: absolute;
   top: 0;
-  left: -100;
+  left: 0;
 }
 
 .gamerimg {
   fill-opacity: inherit;
   margin: auto;
+  max-width: 100vh;
+}
+
+.masterimg {
+  fill-opacity: inherit;
+  margin: auto;
+  width:  400px;
+  height: 400px;
+  padding: 25px;
+}
+
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: none;
+}
+
+#btn-scroll {
+  position: fixed;
+  bottom: 20px;
+  left: 50vh;
+  display: block;
+  -webkit-animation: bounce 0.75s infinite;
+}
+ 
+@-webkit-keyframes bounce {
+  0% {
+    transform: scale(1,1) translate(0px, 0px);
+  }
+  30%{
+    transform: scale(1,0.8) translate(0px, 10px); 
+  }
+
+  75%{
+    transform: scale(1,1.1) translate(0px, -25px); 
+  }
+
+  100% {
+    transform: scale(1,1) translate(0px, 0px);
+  }
 }

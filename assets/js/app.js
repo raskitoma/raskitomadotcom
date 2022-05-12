@@ -10,11 +10,11 @@ const controller = new ScrollMagic.Controller();
 
 //Scenes
 let scene = new ScrollMagic.Scene({
-  duration: 10000,
+  duration: 6000,
   triggerElement: intro,
   triggerHook: 0
 })
-//  .addIndicators()
+  // .addIndicators()
   .setPin(intro)
   .addTo(controller);
 
@@ -22,7 +22,7 @@ let scene = new ScrollMagic.Scene({
 const textAnim = TweenMax.fromTo(text, 3, { opacity: 1 }, { opacity: 0 });
 
 let scene2 = new ScrollMagic.Scene({
-  duration: 11000,
+  duration: 8000,
   triggerElement: intro,
   triggerHook: 0
 })
@@ -44,3 +44,35 @@ setInterval(() => {
 
   video.currentTime = delay;
 }, 33.33);
+
+
+
+//Get the button
+let mybutton = document.getElementById("btn-back-to-top");
+let mybutton2 = document.getElementById("btn-scroll");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 6000 ||
+    document.documentElement.scrollTop > 6000
+  ) {
+    mybutton.style.display = "block";
+    mybutton2.style.display = "none";
+
+  } else {
+    mybutton.style.display = "none";
+    mybutton2.style.display = "block";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+mybutton.addEventListener("click", backToTop);
+
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
