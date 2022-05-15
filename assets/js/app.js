@@ -40,7 +40,7 @@ scene.on("update", e => {
 
 setInterval(() => {
   delay += (scrollpos - delay) * accelamount;
-  console.log(scrollpos, delay);
+  // console.log(scrollpos, delay);
 
   video.currentTime = delay;
 }, 33.33);
@@ -50,6 +50,8 @@ setInterval(() => {
 //Get the button
 let mybutton = document.getElementById("btn-back-to-top");
 let mybutton2 = document.getElementById("btn-scroll");
+// Get the navbar
+let mynavbar = document.getElementById("navbarrask");
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () {
@@ -63,10 +65,13 @@ function scrollFunction() {
   ) {
     mybutton.style.display = "block";
     mybutton2.style.display = "none";
-
+    mynavbar.classList.add("navbar-colored");
+    mynavbar.classList.remove("navbar-transparent");
   } else {
     mybutton.style.display = "none";
     mybutton2.style.display = "block";
+    mynavbar.classList.remove("navbar-colored");
+    mynavbar.classList.add("navbar-transparent");
   }
 }
 // When the user clicks on the button, scroll to the top of the document

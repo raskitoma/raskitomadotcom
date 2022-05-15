@@ -30,7 +30,6 @@ body {
 
 .intro {
   height: 100vh;
-
   display: flex;
 }
 
@@ -39,6 +38,7 @@ body {
   height: 100vh;
   width: 100vw;
   object-fit: cover;
+  z-index: 2;
 }
 
 .intro h1 {
@@ -74,6 +74,33 @@ section .projects div {
 section .space-me {
   padding-top: 100px;
 }
+
+section .aografobia-1 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+section .aografobia-2 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+section .aografobia-3 {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+section .aografobia-4 {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+section .aografobia-5 {
+  padding-top: 250px;
+  padding-bottom: 250px;
+}
+
+
 
 section .projectimg {
   fill-opacity: inherit;
@@ -203,4 +230,21 @@ section h1 {
 
 .sec-color-04 {
   background-color: #f0fff4;
+}
+
+.navbar-colored { background-color: rgba(0, 0, 0, 0.5); }
+.navbar-transparent { background-color:transparent;}
+
+
+.zammad-form .btn {
+  background-color: #f1f1f1;
+  border-color: #f1f1f1;
+  width: 100%;
+}
+
+.zammad-form .btn:hover {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  color: white;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
 }

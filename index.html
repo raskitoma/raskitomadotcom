@@ -11,7 +11,7 @@
     <title>Welcome to the Tech Misadventures of Raskitoma</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong fixed-top" id="navbarrask">
       <div class="container-fluid">
         <a class="navbar-brand" href="#"><img class="masterlogo" src="./assets/media/rask_logo-white.svg" alt=""></a>
         <button class="navbar-toggler"`
@@ -44,20 +44,20 @@
           <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
             <li class="nav-item">
               <a class="nav-link" href="https://github.com/raskitoma" target="_blank" rel="noopener">
-                <i class="fab fa-github fa-2x"></i>
-                <small class="d-md-none ms-2">GitHub</small>
+                <i class="fab fa-github fa-2x ms-3"></i>
+                <small class="d-md-none ms-0">GitHub</small>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="https://twitter.com/wantan" target="_blank" rel="noopener">
-                <i class="fab fa-twitter fa-2x"></i>
-                <small class="d-md-none ms-2">Twitter</small>
+                <i class="fab fa-twitter fa-2x ms-3"></i>
+                <small class="d-md-none ms-0">Twitter</small>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="https://youtube.com/c/raskitoma" target="_blank" rel="noopener">
-                <i class="fab fa-youtube fa-2x"></i>
-                <small class="d-md-none ms-2">Youtube</small>
+                <i class="fab fa-youtube fa-2x ms-3"></i>
+                <small class="d-md-none ms-0">Youtube</small>
               </a>
             </li>
           </ul>          
@@ -225,10 +225,11 @@
         <video autoplay muted loop id="myVideo">
           <source src="./assets/media/epic walk.mp4" type="video/mp4">
         </video>
-        <div class="content space-me">
+        <div class="content aografobia-5">
           <h1>Contact</h1>
-          <h2>If you need help, just write your info here. You'll receive a answer shortly.</h2>
-          <p>Lorem ipsum...</p>
+          <h2 class="text-center space-me">If you need help, use the button below. You'll receive a answer shortly.</h2>
+          <div class="space-me"></div>
+          <p class="text-center space-me"><button class="btn btn-primary btn-lg shadow" id="feedback-form">Click here to send Feedback</button></p>
         </div>        
       </section>
 
@@ -284,7 +285,8 @@
     <!-- Your Chat Plugin code -->
     <div id="fb-customer-chat" class="fb-customerchat">
     </div>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script id="zammad_form_script" src="https://support.raskitoma.com/assets/form/form.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"
       integrity="sha256-2p2tRZlPowp3P/04Pw2rqVCSbhyV/IB7ZEVUglrDS/c="
@@ -331,6 +333,19 @@
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
     </script>
+
+<script>
+  $(function() {
+    $('#feedback-form').ZammadForm({
+      messageTitle: 'Contact',
+      messageSubmit: 'Submit',
+      messageThankYou: 'Thank you for your inquiry (#%s)! We\'ll contact you as soon as possible.',
+      showTitle: true,
+      modal: true,
+      // noCSS: true
+    });
+  });
+  </script>
 
 </body>
 </html>
