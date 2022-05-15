@@ -1,17 +1,16 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 
 body {
   font-family: "Raleway", sans-serif;
-  min-height: 100vh;
-  background-image: linear-gradient(#000000 0px, #000000 10%,#f0fff4 20%,#f0fff4 30%,#00c535 40%,#00c535 50%,#ffc31f 60%,#ffc31f 70%,#00eeff 80%, #000000 100%);
 }
 
 .txtcaveat {
   font-family: "Caveat", cursive;
+  font-size: xx-large;
 }
 
 .txtroboto {
@@ -20,16 +19,25 @@ body {
 
 .masterlogo {
   width: auto;
-  max-height: 24px;
+  max-height: 32px;
+}
+
+.masterlogo2 {
+  position: relative;
+  width: 40vw;
+  max-height: 40vh;
 }
 
 .intro {
   height: 100vh;
+
+  display: flex;
 }
 
 .intro video {
+  position: absolute;
   height: 100vh;
-  width: auto;
+  width: 100vw;
   object-fit: cover;
 }
 
@@ -50,7 +58,7 @@ body {
 }
 
 section {
-  /* height: 100vh; */
+  width: 100vw;
   color: black;
 }
 
@@ -87,49 +95,35 @@ section h1 {
 }
 
 .video-wrapper {
-  /* Telling our absolute positioned video to 
-  be relative to this element */
   position: relative;
-
-   width: auto !important;
-   height: 100vh !important;
-
-  /* Will not allow the video to overflow the 
-  container */
-  overflow: auto;
-
-  /* Centering the container's content vertically 
-  and horizontally */
+  width: 100vw !important;
+  height: 75vh !important;
+  overflow: hidden;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Just styling the content of the div, the *magic* in the previous rules */
 .video-wrapper .caption {
-z-index: 1;
-position: relative;
-text-align: left;
-color: #ffffff;
-padding: 10px;
+  z-index: 2;
+  position: absolute;
+  text-align: left;
+  color: #ffffff;
 }
 
-video {
-  /** Simulationg background-size: cover */
-  object-fit: cover;
-  height: 100vh !important;
-  width: 100% !important;
-
+#epicwalk {
+  /* object-fit: cover; */
   position: absolute;
-  top: 0;
-  left: 0;
+  height: 100vh !important;
+  width: 100vw !important;
+  /* width: auto !important; */
+  z-index: -1;
 }
 
 .gamerimg {
-  fill-opacity: inherit;
-  margin: auto;
-  max-width: 100vh;
+  max-width: 100vw !important;
+  max-height: 100vh !important;
 }
 
 .masterimg {
@@ -145,14 +139,16 @@ video {
   bottom: 20px;
   left: 20px;
   display: none;
+  z-index: 99;
 }
 
 #btn-scroll {
   position: fixed;
   bottom: 20px;
-  left: 50vh;
+  left: 20px;
   display: block;
   -webkit-animation: bounce 0.75s infinite;
+  z-index: 99;
 }
  
 @-webkit-keyframes bounce {
@@ -170,4 +166,41 @@ video {
   100% {
     transform: scale(1,1) translate(0px, 0px);
   }
+}
+
+
+/* Required by bottom video? */
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+/* Add some content at the bottom of the video/page */
+.content {
+  position: relative;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+.sec-color-01 {
+  background-color: #f1f1f1;
+}
+.sec-color-02 {
+  background-color: #f0fff4;
+}
+.sec-color-03 {
+  background-color: #f1f1f1;
+}
+
+.sec-color-04 {
+  background-color: #f0fff4;
 }
