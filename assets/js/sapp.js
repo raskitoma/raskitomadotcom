@@ -59,20 +59,30 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
+  // Control buttons
   if (
     document.body.scrollTop > 6000 ||
     document.documentElement.scrollTop > 6000
   ) {
     mybutton.style.display = "block";
     mybutton2.style.display = "none";
-    mynavbar.classList.add("navbar-colored");
-    mynavbar.classList.remove("navbar-transparent");
   } else {
     mybutton.style.display = "none";
     mybutton2.style.display = "block";
+  }
+
+  // Control navbar
+  if (
+    document.body.scrollTop > 6630 ||
+    document.documentElement.scrollTop > 6630
+  ) {
+    mynavbar.classList.add("navbar-colored");
+    mynavbar.classList.remove("navbar-transparent");
+  } else {
     mynavbar.classList.remove("navbar-colored");
     mynavbar.classList.add("navbar-transparent");
   }
+
 }
 // When the user clicks on the button, scroll to the top of the document
 mybutton.addEventListener("click", backToTop);
