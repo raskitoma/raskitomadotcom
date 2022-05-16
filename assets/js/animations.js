@@ -1,7 +1,7 @@
 const app = new PIXI.Application({
   view: document.querySelector(".star-canvas"),
   resizeTo: window,
-  backgroundAlpha: 0.5
+  backgroundAlpha: 0
 });
 document.body.appendChild(app.view);
 
