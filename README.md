@@ -4,7 +4,7 @@ This is just my website.
 
 Thanks for watching.
 
-![Raskitoma says hi!](./assets/media/raskitoma_anim.gif =50x)
+![Raskitoma says hi!](assets/media/raskitoma_anim.gif =50x)
 
 ## About
 
