@@ -399,7 +399,7 @@ section h1 {
 
 /* Not too many browser support this yet but it's good to add! */
 @media (prefers-contrast: high) {
-  .orb-canvas {
+  .star-canvas {
     display: none;
   }
 }
