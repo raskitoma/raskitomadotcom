@@ -1,10 +1,6 @@
-# mynewsite
+# Raskitoma dot COM
 
 This is just my website.
-
-Thanks for watching.
-
-![Raskitoma says hi!](assets/media/raskitoma_anim.gif =50x)
 
 ## About
 
@@ -14,7 +10,12 @@ For other animations and effects, I use [GSAP](https://greensock.com/gsap-js/) w
 
 Also I'm using my self-hosted [Zammad](https://zammad.com) integration for communication and ticketing.
 
+<<<<<<< HEAD
 Favicon generated from SVG using [RealFaviconGenerator](https://realfavicongenerator.net/)
+=======
+Using some fonts from [Google Fonts](https://fonts.google.com) catalog. Thanks Google!
+
+>>>>>>> fd6f1bfd1c2ffcf5eea421471365fe1ff70c3558
 ## Quality Code
 
 
