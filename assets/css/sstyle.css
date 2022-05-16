@@ -1,11 +1,13 @@
 * {
   margin: 0;
   padding: 0;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 body {
   font-family: "Raleway", sans-serif;
+  position: relative;
 }
 
 .txtcaveat {
@@ -24,8 +26,8 @@ body {
 
 .masterlogo2 {
   position: relative;
-  width: 40vw;
-  max-height: 40vh;
+  width: 50vw;
+  max-height: 50vh;
 }
 
 .intro {
@@ -49,12 +51,6 @@ body {
   font-size: 60px;
   color: white;
   z-index: 99999;
-}
-
-.whoamix {
-  margin: auto;
-  text-align: center;  
-  color: rgb(0, 0, 0);
 }
 
 section {
@@ -118,34 +114,7 @@ section h1 {
 }
 
 .captionbg {
-  background-color: rgba(0,0,0,0.5);
-}
-
-.video-wrapper {
-  position: relative;
-  width: 100vw !important;
-  height: 75vh !important;
-  overflow: hidden;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.video-wrapper .caption {
-  z-index: 2;
-  position: absolute;
-  text-align: left;
-  color: #ffffff;
-}
-
-#epicwalk {
-  /* object-fit: cover; */
-  position: absolute;
-  height: 100vh !important;
-  width: 100vw !important;
-  /* width: auto !important; */
-  z-index: -1;
+  background-color: rgba(0,0,0,0.7);
 }
 
 .gamerimg {
@@ -195,28 +164,7 @@ section h1 {
   }
 }
 
-
-/* Required by bottom video? */
-
-/* Style the video: 100% width and height to cover the entire window */
-#myVideo {
-  position: relative;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -9999;
-}
-
-/* Add some content at the bottom of the video/page */
-.content {
-  position: relative;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: #f1f1f1;
-  width: 100%;
-  padding: 20px;
-}
+/* BG section coloring */
 
 .sec-color-01 {
   background-color: #f1f1f1;
@@ -232,10 +180,12 @@ section h1 {
   background-color: #f0fff4;
 }
 
+/* Navbar bg control */
+
 .navbar-colored { background-color: rgba(0, 0, 0, 0.5); }
 .navbar-transparent { background-color:transparent;}
 
-
+/* Form button styling */
 .zammad-form .btn {
   background-color: #f1f1f1;
   border-color: #f1f1f1;
@@ -247,4 +197,86 @@ section h1 {
   border-color: #0d6efd;
   color: white;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+/* Video BG at last? */
+#videowrapper{  
+  position: relative;
+  overflow: hidden;
+} 
+
+#fullScreenDiv{
+  min-height: 100%; 
+  height: 100vh;
+  width: 100vw;
+  padding:0;
+  margin: 0;
+  background-color: gray;
+  position: relative;
+  overflow: hidden;
+}
+
+#video{    
+  width: 100vw; 
+  height: auto;
+  margin: auto;
+  display: block;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  #video{
+    width: 100vw; 
+    height:auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  #video {
+    height: 100vh; 
+    width:auto;
+    margin-left: 50vw;
+    transform: translate(-50%);
+  }
+}
+
+#videoMessage{
+  width: 100%; 
+  height: 100%;
+  position: absolute; 
+  top: 0; 
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.styling *{ margin:0.2em; text-align:center;color:#ffffff;}
+
+
+/* Carousel title */
+.carousel-title {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  padding: 10px;
+  top: 0px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  color: white;
+  text-shadow: 2px 2px 2px #000000;
+  z-index: 20;
+  font-weight: bolder;
+}
+
+
+.prjcard {
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); opacity: 1;
+  @include transition(all 1 $custom-ease);
+            a {
+                display: block;
+                width: 100%;
+                position: relative;
+                @include box-shadow(10px 10px 0 0 $blue900);
+            }
 }
