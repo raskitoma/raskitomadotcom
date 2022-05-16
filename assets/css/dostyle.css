@@ -29,15 +29,9 @@ html {
 body {
   font-family: "Raleway", sans-serif;
   position: relative;
-}
-
-body {
   max-width: 1920px;
   min-height: 100vh;
   display: grid;
-  /* place-items: center; */
-  /* padding: 2rem; */
-  /* font-family: var(--font-family); */
   color: var(--dark-color);
   background: var(--bg-gradient);
 }
@@ -81,7 +75,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 60px;
+  font-size: 2em;
   color: white;
   z-index: 99999;
 }
@@ -93,7 +87,7 @@ section {
 
 section h1 {
   text-align: center;
-  font-size: 70px;
+  font-size: 3em;
 }
 
 section .projects div {
@@ -331,7 +325,7 @@ section h1 {
   width: 100%;
   max-width: 1140px;
   max-height: 640px;
-  padding: 8rem 6rem;
+  padding: 6rem 6rem;
   display: flex;
   align-items: center;
   background: rgba(255, 255, 255, 0.375);
@@ -341,7 +335,7 @@ section h1 {
 }
 
 .overlay__inner {
-  max-width: 36rem;
+  /* max-width: 36rem; */
 }
 
 .overlay__title {
@@ -365,9 +359,10 @@ section h1 {
 }
 
 .overlay__description {
-  font-size: 1rem;
+  font-size: 1.75rem;
   line-height: 1.75rem;
   margin-bottom: 3rem;
+  overflow: hidden;
 }
 
 .overlay__btns {
