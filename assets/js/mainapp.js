@@ -1,7 +1,6 @@
 const intro = document.querySelector(".intro");
 const video = intro.querySelector("video");
 const text = intro.querySelector("h1");
-//END SECTION
 const section = document.querySelector("section");
 const end = section.querySelector("div");
 
@@ -19,7 +18,8 @@ let scene = new ScrollMagic.Scene({
   .addTo(controller);
 
 //Text Animation
-const textAnim = TweenMax.fromTo(text, 3, { opacity: 1 }, { opacity: 0 });
+// const textAnim = TweenMax.fromTo(text, 3, { opacity: 1 }, { opacity: 0 });
+const textAnim = gsap.fromTo(text, 3, { opacity: 1 }, { opacity: 0 });
 
 let scene2 = new ScrollMagic.Scene({
   duration: 8000,
@@ -41,11 +41,8 @@ scene.on("update", e => {
 setInterval(() => {
   delay += (scrollpos - delay) * accelamount;
   // console.log(scrollpos, delay);
-
   video.currentTime = delay;
 }, 33.33);
-
-
 
 //Get the button
 let mybutton = document.getElementById("btn-back-to-top");

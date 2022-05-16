@@ -1,5 +1,18 @@
 # mynewsite
 
+This is just my website.
+
+Thanks for watching.
+
+![Raskitoma says hi!](assets/media/raskitoma_anim.gif =50x)
+
+## About
+
+I'm using [PixiJS](https://pixijs.com/) and [AoS](https://michalsnik.github.io/aos/) for object and background animations.
+
+For other animations and effects, I use [GSAP](https://greensock.com/gsap-js/) with [ScrollMagic](https://scrollmagic.io/).
+
+Also I'm using my self-hosted [Zammad](https://zammad.com) integration for communication and ticketing.
 
 ## Quality Code
 
