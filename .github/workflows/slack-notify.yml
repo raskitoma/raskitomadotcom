@@ -1,12 +1,26 @@
 on: issue_comment
 name: Slack Notification
 jobs:
-  slackNotification:
-    name: Slack Notification
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: Slack Notify
-      uses: rtCamp/action-slack-notify@v2.2.0
-      env:
-        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+- name: Send custom JSON data to Slack workflow
+  id: slack
+  uses: slackapi/slack-github-action@v1.18.0
+  with:
+    # For posting a rich message using Block Kit
+    payload: |
+      {
+        "text": "GitHub Action build result: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}",
+        "blocks": [
+          {
+            "type": "section",
+            "text": {
+              "type": "mrkdwn",
+              "text": "GitHub Action build result: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}"
+            }
+          }
+        ]
+      }
+  env:
+    SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
+    SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
+    
+    
