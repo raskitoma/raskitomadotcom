@@ -1,16 +1,12 @@
 const app = new PIXI.Application({
-  // render to <canvas class="orb-canvas"></canvas>
-  view: document.querySelector(".orb-canvas"),
-  // auto adjust size to fit the current window
+  view: document.querySelector(".star-canvas"),
   resizeTo: window,
   backgroundAlpha: 1
-  // transparent background, we will be creating a gradient background later using CSS
 });
 document.body.appendChild(app.view);
 
 // Get the texture for rope.
 const starTexture = PIXI.Texture.from('/assets/media/star.png');
-
 
 const starAmount = 1000;
 let cameraZ = 0;
@@ -20,7 +16,6 @@ let speed = 0;
 let warpSpeed = 0;
 const starStretch = 5;
 const starBaseSize = 0.05;
-
 
 // Create the stars
 const stars = [];

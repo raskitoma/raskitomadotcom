@@ -10,7 +10,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="./assets/fontawesome/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Caveat|Raleway">
-    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">    
+    <link rel="stylesheet" href="./assets/css/pagestyles.css" />
     <script src="https://pixijs.download/release/pixi.js"></script>
     <title>Welcome to the Tech Misadventures of Raskitoma</title>
   </head>
@@ -70,7 +71,7 @@
     </nav>
 
     <!-- Some objects -->
-    <canvas class="orb-canvas"></canvas>
+    <canvas class="star-canvas"></canvas>
 
     <!-- Intro text and video -->
     <div class="intro">
@@ -112,11 +113,11 @@
     <!-- Projects -->
     <section id="raskpro"  class="sec-color-02">
       <div class="sectionspacer">
-        <h1 class="text-dark">Projects</h1>
+        <h1 class="text-dark" data-aos="fade-down">Projects</h1>
         <div class="container">
           <div class="row">
             <div class="col-md-6 p-4">
-              <div class="container p-5 prjcard" data-delay="0.3" data-speed="0.35" data-animation="long-from-right" style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); opacity: 1;">
+              <div class="container p-5" data-aos="fade-right">
                 <div class="row bg-white shadow rounded-3">
                   <div class="col-md-3 p-3">
                     <a href="https://wiki.raskitoma.com">
@@ -132,7 +133,7 @@
               </div>
             </div>
             <div class="col-md-6 p-4">
-              <div class="container p-5">
+              <div class="container p-5" data-aos="fade-left">
                 <div class="row bg-white shadow rounded-3">
                   <div class="col-md-3 p-3">
                     <a href="https://github.com/raskitoma">
@@ -153,8 +154,8 @@
     </section>
 
     <!-- The Gamer -->
-    <section id="raskgam" class="sec-color-03">
-      <div class="carousel">
+    <section id="raskgam" class="sec-color-02">
+      <div class="carousel space-me">
         <div id="carouselRask" class="carousel slide carousel-fade" data-bs-ride="carousel">
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselRask" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -163,7 +164,7 @@
             <button type="button" data-bs-target="#carouselRask" data-bs-slide-to="3" aria-label="Slide 4"></button>
           </div>
           <div class="carousel-inner">
-            <h1 class="carousel-title space-me">The Gamer</h1>
+            <h1 class="carousel-title">The Gamer</h1>
             <div class="carousel-item active" data-bs-interval="7000">
               <img src="./assets/media/gamer-cod01.png" class="d-block w-auto gamerimg shadow" alt="...">
               <div class="carousel-caption d-none d-md-block captionbg">
@@ -208,8 +209,8 @@
       <!-- Stats -->
       <section id="rasksta" class="sec-color-04">
         <div class="sectionspacer">
-          <h1>Some Stats</h1>
-          <div class="row justify-content-center space-me">
+          <h1 data-aos="fade-down">Some Stats</h1>
+          <div class="row justify-content-center space-me"  data-aos="zoom-out"  data-aos-duration="1000">
             <div class="col-md-6">
               <p class="text-center p-5">
                 <img class="shadow" src="https://github-readme-stats.vercel.app/api?username=raskitoma&show_icons=true&count_private=true" class="img-fluid" alt="Github stats">
@@ -224,10 +225,10 @@
           <div class="row justify-content-center ">
             <div class="col-12">
               <p class="text-center p-5">
-                <img class="shadow" src="https://img.shields.io/github/followers/raskitoma?logo=GitHub&style=for-the-badge" alt="GitHub Followers">
-                <img class="shadow" src="https://img.shields.io/github/stars/raskitoma?logo=github&style=for-the-badge" alt="GitHub Stars">
-                <img class="shadow" src="https://img.shields.io/twitter/follow/wantan?color=0E7FC0&logo=twitter&style=for-the-badge&label=Twitter" alt="Twitter Followers">
-                <img class="shadow" src="https://img.shields.io/twitch/status/raskitoma?color=9147FF&logo=twitch&style=for-the-badge" alt="Twitch Status">
+                <img class="shadow" data-aos="fade-up" data-aos-duration="500" src="https://img.shields.io/github/followers/raskitoma?logo=GitHub&style=for-the-badge" alt="GitHub Followers">
+                <img class="shadow" data-aos="fade-up" data-aos-duration="1000" src="https://img.shields.io/github/stars/raskitoma?logo=github&style=for-the-badge" alt="GitHub Stars">
+                <img class="shadow" data-aos="fade-up" data-aos-duration="1500" src="https://img.shields.io/twitter/follow/wantan?color=0E7FC0&logo=twitter&style=for-the-badge&label=Twitter" alt="Twitter Followers">
+                <img class="shadow" data-aos="fade-up" data-aos-duration="2000" src="https://img.shields.io/twitch/status/raskitoma?color=9147FF&logo=twitch&style=for-the-badge" alt="Twitch Status">
               </p>              
           </div>
         </div>
@@ -244,7 +245,7 @@
                 <h1>Contact</h1>
                 <h2 class="text-center space-me">If you need help, use the button below. You'll receive a answer shortly.</h2>
                 <div class="space-me"></div>
-                <p class="text-center space-me"><button class="btn btn-primary btn-lg shadow" id="feedback-form">Click here to send Feedback</button></p>
+                <p class="text-center space-me " data-aos="zoom-in" data-aos-duration="1000"><button class="btn btn-primary btn-lg shadow" id="feedback-form">Click here to send Feedback</button></p>
               </div>   
           </div>
         </div>
@@ -325,8 +326,9 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="./assets/js/doapp.js"></script>
-    <script src="./assets/js/animsssss.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>    
+    <script src="./assets/js/mainapp.js"></script>
+    <script src="./assets/js/aniations.js"></script>
 
     <script>
       var chatbox = document.getElementById('fb-customer-chat');
@@ -363,6 +365,10 @@
       // noCSS: true
     });
   });
+  </script>
+
+  <script>
+    AOS.init();
   </script>
 
 </body>

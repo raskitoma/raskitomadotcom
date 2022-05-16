@@ -297,21 +297,8 @@ section h1 {
 }
 
 
-.prjcard {
-  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); opacity: 1;
-  @include transition(all 1 $custom-ease);
-            a {
-                display: block;
-                width: 100%;
-                position: relative;
-                @include box-shadow(10px 10px 0 0 $blue900);
-            }
-}
-
 /* overlay */
-
-
-.orb-canvas {
+.star-canvas {
   position: fixed;
   top: 0;
   left: 0;
@@ -328,14 +315,10 @@ section h1 {
   padding: 6rem 6rem;
   display: flex;
   align-items: center;
-  background: rgba(255, 255, 255, 0.375);
+  background: rgba(255, 255, 255, 0.6);
   box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
   border-radius: 2rem;
   border: 1px solid rgba(255, 255, 255, 0.125);
-}
-
-.overlay__inner {
-  /* max-width: 36rem; */
 }
 
 .overlay__title {
@@ -352,10 +335,20 @@ section h1 {
     var(--base) 25%,
     var(--complimentary2)
   );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
+  -webkit-animation: gradiantme 5s infinite;
+}
+
+@keyframes gradiantme {
+  0% {
+    color: rgb(255, 174, 0);
+  }
+  50% {
+    color: rgb(255, 115, 0);
+  }
+  100% {
+    color: rgb(255, 174, 0);
+  }
+
 }
 
 .overlay__description {
@@ -415,7 +408,7 @@ section h1 {
   .overlay {
     padding: 8rem 4rem;
   }
-}
+
 
 @media only screen and (max-width: 840px) {
   .overlay {
