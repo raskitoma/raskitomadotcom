@@ -70,8 +70,8 @@ function scrollFunction() {
 
   // Control navbar
   if (
-    document.body.scrollTop > 6630 ||
-    document.documentElement.scrollTop > 6630
+    document.body.scrollTop > 6530 ||
+    document.documentElement.scrollTop > 6530
   ) {
     mynavbar.classList.add("navbar-colored");
     mynavbar.classList.remove("navbar-transparent");

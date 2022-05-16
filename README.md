@@ -14,6 +14,7 @@ For other animations and effects, I use [GSAP](https://greensock.com/gsap-js/) w
 
 Also I'm using my self-hosted [Zammad](https://zammad.com) integration for communication and ticketing.
 
+Favicon generated from SVG using [RealFaviconGenerator](https://realfavicongenerator.net/)
 ## Quality Code
 
 

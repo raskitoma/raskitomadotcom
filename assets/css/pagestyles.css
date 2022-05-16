@@ -4,14 +4,6 @@
   --base: hsl(var(--hue), 95%, 50%);
   --complimentary1: hsl(var(--hue-complimentary1), 95%, 50%);
   --complimentary2: hsl(var(--hue-complimentary2), 95%, 50%);
-
-  /* --font-family: "Poppins", system-ui; */
-
-  --bg-gradient: linear-gradient(
-    to bottom,
-    hsl(var(--hue), 95%, 99%),
-    hsl(var(--hue), 95%, 84%)
-  );
 }
 
 html {
@@ -32,7 +24,7 @@ body {
   max-width: 1920px;
   min-height: 100vh;
   color: var(--dark-color);
-  background: var(--bg-gradient);
+  background: black;
 }
 
 .txtcaveat {
@@ -315,7 +307,6 @@ section h1 {
 
 .overlay {
   width: 100%;
-  max-width: 1140px;
   max-height: 640px;
   padding: 6rem 6rem;
   display: flex;
@@ -345,16 +336,9 @@ section h1 {
 }
 
 @keyframes gradiantme {
-  0% {
-    color: rgb(255, 174, 0);
-  }
-  50% {
-    color: rgb(0, 183, 255);
-  }
-  100% {
-    color: rgb(255, 174, 0);
-  }
-
+  0%   { color: rgb(255, 174, 0); }
+  50%  { color: rgb(0, 183, 255); }
+  100% { color: rgb(255, 174, 0); }
 }
 
 .overlay__description {
