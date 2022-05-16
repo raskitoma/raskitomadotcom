@@ -9,8 +9,8 @@ const app = new PIXI.Application({
 document.body.appendChild(app.view);
 
 // Get the texture for rope.
-//const starTexture = PIXI.Texture.from('/assets/media/star.png');
-const starTexture = PIXI.Texture.fromURL('https://raskitoma.com/assets/media/star.png');
+const starTexture = PIXI.Texture.from('/assets/media/star.png');
+
 
 const starAmount = 1000;
 let cameraZ = 0;
