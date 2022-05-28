@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <style bx:fonts="Be Vietnam Pro">@import url(https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro%3Aital%2Cwght%400%2C100%3B0%2C200%3B0%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900%3B1%2C100%3B1%2C200%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%3B1%2C800%3B1%2C900&amp;display=swap);</style>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, -162.779083, -15.849365)">
+    <g>
+      <g transform="matrix(1, 0, 0, 1, -9.220913, -94.150635)">
+        <path style="fill: rgb(174, 42, 47);" d="M 255 110 L 255 140 L 172 190 L 172 160 L 255 110 Z"/>
+        <path style="fill: rgb(174, 42, 47);" d="M 255 155 L 255 185 L 172 235 L 172 205 L 255 155 Z"/>
+        <path style="fill: rgb(174, 42, 47);" d="M 338 160 L 338 190 L 255 240 L 255 210 L 338 160 Z"/>
+        <path style="fill: rgb(174, 42, 47);" d="M 338 205 L 338 235 L 255 285 L 255 255 L 338 205 Z"/>
+        <path style="fill: rgb(174, 42, 47); fill-opacity: 0.4;" d="M 338 190 L 338 160 L 255 110 L 255 140 L 338 190 Z" transform="matrix(-1, 0, 0, -1, 593, 300)"/>
+        <path style="fill: rgb(174, 42, 47); fill-opacity: 0.4;" d="M 338 235 L 338 205 L 255 155 L 255 185 L 338 235 Z" transform="matrix(-1, 0, 0, -1, 593, 390)"/>
+        <path style="fill: rgb(174, 42, 47); fill-opacity: 0.4;" d="M 255 240 L 255 210 L 172 160 L 172 190 L 255 240 Z" transform="matrix(-1, 0, 0, -1, 427, 400)"/>
+        <path style="fill: rgb(174, 42, 47); fill-opacity: 0.4;" d="M 255 285 L 255 255 L 172 205 L 172 235 L 255 285 Z" transform="matrix(-1, 0, 0, -1, 427, 490)"/>
+      </g>
+      <text style="fill: rgb(174, 42, 47); font-family: &quot;Be Vietnam Pro&quot;; font-size: 35px; white-space: pre;" x="172.473" y="231.793">DaOffice</text>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 248.724594, -91.283829)">
+      <path style="fill: rgb(174, 42, 47);" d="M 255 110 L 255 140 L 172 190 L 172 160 L 255 110 Z"/>
+      <path style="fill: rgb(174, 42, 47);" d="M 255 155 L 255 185 L 172 235 L 172 205 L 255 155 Z"/>
+      <path style="fill: rgb(174, 42, 47);" d="M 338 160 L 338 190 L 255 240 L 255 210 L 338 160 Z"/>
+      <path style="fill: rgb(174, 42, 47);" d="M 338 205 L 338 235 L 255 285 L 255 255 L 338 205 Z"/>
+      <path style="fill: rgb(174, 42, 47); fill-opacity: 0.4;" d="M 338 190 L 338 160 L 255 110 L 255 140 L 338 190 Z" transform="matrix(-1, 0, 0, -1, 593, 300)"/>
+      <path style="fill: rgb(174, 42, 47); fill-opacity: 0.4;" d="M 338 235 L 338 205 L 255 155 L 255 185 L 338 235 Z" transform="matrix(-1, 0, 0, -1, 593, 390)"/>
+      <path style="fill: rgb(174, 42, 47); fill-opacity: 0.4;" d="M 255 240 L 255 210 L 172 160 L 172 190 L 255 240 Z" transform="matrix(-1, 0, 0, -1, 427, 400)"/>
+      <path style="fill: rgb(174, 42, 47); fill-opacity: 0.4;" d="M 255 285 L 255 255 L 172 205 L 172 235 L 255 285 Z" transform="matrix(-1, 0, 0, -1, 427, 490)"/>
+    </g>
+    <g>
+      <g transform="matrix(0.249401, 0, 0, 0.249401, 271.657684, 303.674805)" style="">
+        <path style="fill: rgb(174, 42, 47);" d="M 255 110 L 255 140 L 172 190 L 172 160 L 255 110 Z"/>
+        <path style="fill: rgb(174, 42, 47);" d="M 255 155 L 255 185 L 172 235 L 172 205 L 255 155 Z"/>
+        <path style="fill: rgb(174, 42, 47);" d="M 338 160 L 338 190 L 255 240 L 255 210 L 338 160 Z"/>
+        <path style="fill: rgb(174, 42, 47);" d="M 338 205 L 338 235 L 255 285 L 255 255 L 338 205 Z"/>
+        <path style="fill: rgb(174, 42, 47); fill-opacity: 0.4;" d="M 338 190 L 338 160 L 255 110 L 255 140 L 338 190 Z" transform="matrix(-1, 0, 0, -1, 593, 300)"/>
+        <path style="fill: rgb(174, 42, 47); fill-opacity: 0.4;" d="M 338 235 L 338 205 L 255 155 L 255 185 L 338 235 Z" transform="matrix(-1, 0, 0, -1, 593, 390)"/>
+        <path style="fill: rgb(174, 42, 47); fill-opacity: 0.4;" d="M 255 240 L 255 210 L 172 160 L 172 190 L 255 240 Z" transform="matrix(-1, 0, 0, -1, 427, 400)"/>
+        <path style="fill: rgb(174, 42, 47); fill-opacity: 0.4;" d="M 255 285 L 255 255 L 172 205 L 172 235 L 255 285 Z" transform="matrix(-1, 0, 0, -1, 427, 490)"/>
+      </g>
+      <text style="fill: rgb(174, 42, 47); font-family: &quot;Be Vietnam Pro&quot;; font-size: 35px; white-space: pre;" x="372.912" y="365.752">DaOffice</text>
+    </g>
+  </g>
+</svg>

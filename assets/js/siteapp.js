@@ -88,3 +88,6 @@ function backToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+// Kill right click (I will replace the default context menu with my own)
+document.addEventListener('contextmenu', event => event.preventDefault());
