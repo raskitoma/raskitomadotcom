@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
@@ -14,59 +13,56 @@
   <link rel="manifest" href="/site.webmanifest">
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link href="./assets/fontawesome/css/all.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">  
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Caveat|Raleway">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/sitestyle.css" />
   <script src="https://pixijs.download/release/pixi.js"></script>
   <title>Welcome to the Tech Misadventures of Raskitoma</title>
 </head>
-
-<body data-bs-spy="scroll" data-bs-target="#navbarSupportedContent" data-bs-offset="50">
-  <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong fixed-top" id="navbarrask">
+<body> 
+  <nav class="navbar navbar-expand-sm navbar-dark shadow fixed-top" id="navbarrask">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img class="masterlogo" src="./assets/media/rask_logo-white.svg" alt=""></a>
-      <button class="navbar-toggler" ` type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fa-solid fa-brain"></i>
+      <a class="navbar-brand" href="#"><img class="masterlogo" src="./assets/media/rask_logo-white.svg" alt="Raskitoma.com"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#raskcontent"
+        aria-controls="raskcontent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-menu-up"></i>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <div class="collapse navbar-collapse" id="raskcontent">
+        <ul class="nav nav-pills nav-fill">
           <li class="nav-item">
-            <a class="nav-link" href="#raskwho">Who?</a>
+            <a class="nav-link text-light" href="#raskwho"><i class="bi bi-person-circle"></i>&nbsp; Who is Raskitoma?</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#raskpro">Projects</a>
+            <a class="nav-link text-light" href="#raskpro"><i class="bi bi-person-circle"></i>&nbsp; Projects</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#raskgam">The Gamer</a>
+            <a class="nav-link text-light" href="#raskgam"><i class="bi bi-controller"></i>&nbsp; The Gamer</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#rasksta">Stats</a>
+            <a class="nav-link text-light" href="#rasksta"><i class="bi bi-cpu"></i>&nbsp; Stats</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#raskcon">Contact</a>
+            <a class="nav-link text-light" href="#raskcon"><i class="bi bi-postcard"></i>&nbsp; Contact</a>
           </li>
         </ul>
         <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
           <li class="nav-item">
             <a class="nav-link" href="https://github.com/raskitoma" target="_blank" rel="noopener">
-              <i class="fab fa-github fa-2x ms-3"></i>
+              <i class="bi bi-github"></i>
               <small class="d-md-none ms-0">GitHub</small>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="https://twitter.com/wantan" target="_blank" rel="noopener">
-              <i class="fab fa-twitter fa-2x ms-3"></i>
+              <i class="bi bi-twitter"></i>
               <small class="d-md-none ms-0">Twitter</small>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="https://youtube.com/c/raskitoma" target="_blank" rel="noopener">
-              <i class="fab fa-youtube fa-2x ms-3"></i>
+              <i class="bi bi-youtube"></i>
               <small class="d-md-none ms-0">Youtube</small>
             </a>
           </li>
@@ -79,167 +75,159 @@
   <canvas class="star-canvas"></canvas>
 
   <!-- Intro text and video -->
-  <div class="intro">
+  <div class="intro active">
     <div class="container text-light">
       <h1>Welcome to
         <br>
         <img class="masterlogo2" src="./assets/media/rask_logo-white.svg" alt="">
       </h1>
     </div>
-    <video src="assets/media/top.mp4"></video>
+    <video id="main_video" preload>
+      <source src="assets/media/top.mp4">
+      <description class="text-light">Your browser does not support the video tag.</description>
+      <track kind="captions" src="assets/media/top.vtt" srclang="en" label="English">
+    </video>
   </div>
 
+<!-- Site content -->
+  <div data-bs-spy="scroll" data-bs-target="#navbarrask" data-bs-root-margin="0px 0px 0%" class="scrollspy-example bg-dark p-0 overflow-y-scroll" tabindex="0">
+
   <!-- Who -->
-  <section id="raskwho">
-    <div class="container sectionspacer" data-aos="zoom-in" data-aos-duration="1000">
+  <div id="raskwho">
+    <div class="container p-5" data-aos="zoom-in" data-aos-duration="1000">
       <div class="overlay overflow-hidden">
         <!-- Overlay inner wrapper -->
         <div class="overlay__inner">
           <!-- Title -->
           <h1>
             Who is
-            <span class="text-gradient">Raskitoma</span> ?
+            <strong>
+              <span class="text-gradient">Raskitoma</span> ?
+            </strong>
           </h1>
           <!-- Description -->
           <p class="overlay__description txtcaveat">
-            I don't know who I am!... Just kidding... actually I know how to code in many programming languages, I can
-            adapt and evolve.
+            I'm a <strong>security advisor</strong>,  <strong>full-stack developer</strong> and <strong>system administrator</strong> with a passion for
+            <strong>open-source</strong> and <strong>free software</strong>.  I'm also like to <strong>teach</strong> and
+            <strong>learn</strong> new things.
             <br>
             <br>
-            I'm able to deploy a server, VMs, services, docker containers; attend any software/hardware emergency,
-            recovery, etc.
+            I'm also a <strong>gamer</strong>, love casual and competitive genres, from a good puzzle, RPG, Platform to full feature FPS!
             <br>
             <br>
-            One thing is sure: <strong>I love challenges and I like to solve problems!</strong>
+            <strong>I love challenges and I like to solve problems!</strong>
           </p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
   <!-- Projects -->
-  <section id="raskpro" class="sec-color-02">
-    <div class="sectionspacer">
-      <h1 class="text-dark" data-aos="fade-down">Projects</h1>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 p-4">
-            <div class="container p-5" data-aos="fade-right">
-              <div class="row bg-white shadow rounded-3">
-                <div class="col-md-3 p-3">
-                  <a href="https://wiki.raskitoma.com">
-                    <img src="./assets/media/logos-wikijs.png" class="img-fluid rounded-start projectimg">
-                  </a>
-                </div>
-                <div class="col-md-9 p-3">
-                  <h5 class="card-title">Wiki</h5>
-                  <p class="card-text">This is my contribution to this planet. A Wiki where I can share knowledge.
-                    You're invited to join, read it and contribute. Self hosted, powered by <a href="https://js.wiki"
-                      target="_blank">WikiJS</a></p>
-                  <p class="card-text"><small class="text-muted">You're invited... just click <a
-                        href="https://wiki.raskitoma.com">here</a></small></p>
-                </div>
-              </div>
+  <div class="sec-color-02" id="raskpro">
+    <div class="container p-5">
+      <h1 class="text-dark p-4 text-center" data-aos="fade-down">Projects</h1>
+      <div class="row p-4">
+        <div class="col-md-6 p-4 d-flex">
+          <div class="card flex-fill shadow" data-aos="fade-right">
+            <div class="card-header">
+              <h4 class="card-title"><img src="./assets/media/logos-wikijs.png" class="img-fluid card-img-top card-img-size" alt="WikiJS">&nbsp;Personal Wiki</h4>
+            </div>
+            <div class="card-body">
+              <p class="card-text">This is my contribution to this planet. A Wiki where I can share knowledge.
+                <br><br>
+                You're invited to join, read it and contribute. Self hosted, powered by <a href="https://js.wiki"target="_blank" rel="noopener">WikiJS</a>
+              </p>
+              <a href="https://wiki.raskitoma.com" class="btn btn-primary">Go to my Wiki</a>
             </div>
           </div>
-          <div class="col-md-6 p-4">
-            <div class="container p-5" data-aos="fade-left">
-              <div class="row bg-white shadow rounded-3">
-                <div class="col-md-3 p-3">
-                  <a href="https://github.com/raskitoma">
-                    <img src="./assets/media/logos-octocat.png" class="img-fluid rounded-start projectimg">
-                  </a>
-                </div>
-                <div class="col-md-9 p-3">
-                  <h5 class="card-title">Github</h5>
-                  <p class="card-text">Public and private project repos maintained by me... mostly. You can fork my
-                    public repos for all your needs. Even this website is posted there.</p>
-                  <p class="card-text"><small class="text-muted">What are you waiting for? Click <a
-                        href="https://github.com/raskitoma">here!</a></small></p>
-                </div>
-              </div>
+        </div>
+        <div class="col-md-6 p-4 d-flex">
+          <div class="card flex-fill shadow" data-aos="fade-left">
+            
+            <div class="card-header">
+              <h4 class="card-title"><img src="./assets/media/logos-octocat.png" class="img-fluid card-img-top card-img-size" alt="GitHub">&nbsp;Github Repository</h4>
+            </div>
+            <div class="card-body">
+              <p class="card-text">Public and private project repos maintained mostly by me. I'll appreciate any contribution.
+                <br><br>You can fork my public repos for all your needs. This website is posted there as well.</p>
+                <a href="https://github.com/raskitoma" class="btn btn-primary">Take a look!</a>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
   <!-- The Gamer -->
-  <section id="raskgam" class="sec-color-02">
-    <div class="carousel space-me">
-      <div id="carouselRask" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div id="raskgam" class="sec-color-02">
+    <div class="carousel carousel-dark slide pt-5">
+      <div id="carouselRask" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-ride="false">
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselRask" data-bs-slide-to="0" class="active" aria-current="true"
-            aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselRask" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselRask" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#carouselRask" data-bs-slide-to="2" aria-label="Slide 3"></button>
           <button type="button" data-bs-target="#carouselRask" data-bs-slide-to="3" aria-label="Slide 4"></button>
         </div>
         <div class="carousel-inner">
-          <h1 class="carousel-title">The Gamer</h1>
+          <h1 class="carousel-title text-center">The Gamer</h1>
           <div class="carousel-item active" data-bs-interval="7000">
-            <img src="./assets/media/gamer-cod01.png" class="d-block w-auto gamerimg shadow" alt="...">
+            <img src="./assets/media/gamer-cod01.png" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block captionbg">
               <h5>Gaming</h5>
-              <p>Gaming is one of my passions, after a hard day.</p>
+              <p>Gaming is one of my passions, after a working day.</p>
             </div>
           </div>
           <div class="carousel-item" data-bs-interval="7000">
-            <img src="./assets/media/gamer-cod02.png" class="d-block w-auto gamerimg shadow" alt="...">
+            <img src="./assets/media/gamer-cod02.png" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block captionbg">
               <h5>Genres</h5>
-              <p>I love FPS, RTS, RPG, Racing, Fighting, Platform and Action Adventure. Mostly any Genre!</p>
+              <p>I love FPS, RTS, RPG, Racing, Fighting, Platform and Action Adventure. I can play any Genre!</p>
             </div>
           </div>
           <div class="carousel-item" data-bs-interval="7000">
-            <img src="./assets/media/gamer-cod04.png" class="d-block w-auto gamerimg shadow" alt="...">
+            <img src="./assets/media/gamer-cod04.png" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block captionbg">
               <h5>Multiplayer?</h5>
               <p>Of course, from couch multiplayer, through party games and also competitive battle royale!</p>
             </div>
           </div>
           <div class="carousel-item" data-bs-interval="7000">
-            <img src="./assets/media/gamer-valheim.png" class="d-block w-auto gamerimg shadow" alt="...">
+            <img src="./assets/media/gamer-valheim.png" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block captionbg">
               <h5>Do you have any game servers?</h5>
-              <p>Sure, just ask to access servers. I host Minecraft and Valheim servers.</p>
+              <p>Sure, just ask to access servers. I host TF2, Minecraft and Valheim servers.</p>
             </div>
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselRask" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon btn-dark rounded-pill" aria-hidden="true"></span>
+          <span class="carousel-control-prev-icon  rounded-pill" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselRask" data-bs-slide="next">
-          <span class="carousel-control-next-icon btn-dark rounded-pill" aria-hidden="true"></span>
+          <span class="carousel-control-next-icon  rounded-pill" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
       </div>
     </div>
-  </section>
+  </div>
 
   <!-- Stats -->
-  <section id="rasksta" class="sec-color-04">
-    <div class="sectionspacer">
-      <h1 data-aos="fade-down">Some Stats</h1>
-      <div class="row justify-content-center space-me" data-aos="zoom-out" data-aos-duration="1000">
-        <div class="col-md-6">
-          <p class="text-center p-5">
-            <img class="shadow"
-              src="https://github-readme-stats.vercel.app/api?username=raskitoma&show_icons=true&count_private=true"
-              class="img-fluid" alt="Github stats">
+  <div id="rasksta" class="sec-color-04">
+    <div class="container p-5">
+      <h1 class="text-dark p-4 text-center" data-aos="fade-down">Some Stats</h1>
+      <div class="row justify-content-center" data-aos="zoom-out" data-aos-duration="1000">
+        <div class="col-md-6 p-4">
+          <p class="text-center shadow rounded">
+            <img class="img-fluid" src="https://github-readme-stats.vercel.app/api?username=raskitoma&show_icons=true&count_private=true" alt="Github stats">
           </p>
         </div>
-        <div class="col-md-6">
-          <p class="text-center p-5">
-            <img class="shadow"
-              src="https://github-readme-streak-stats.herokuapp.com/?user=raskitoma&theme=light&count_private=true"
-              class="img-fluid" alt="Github stats">
+        <div class="col-md-6 p-4">
+          <p class="text-center shadow rounded">
+            <img class="img-fluid" src="https://github-readme-streak-stats.herokuapp.com/?user=raskitoma&theme=light&count_private=true" alt="Github stats">
           </p>
         </div>
       </div>
-      <div class="row justify-content-center ">
+      <div class="row justify-content-center">
         <div class="col-12">
           <p class="text-center p-5">
             <img class="shadow m-2" data-aos="fade-up" data-aos-duration="500"
@@ -256,26 +244,32 @@
           </p>
         </div>
       </div>
-  </section>
+    </div>
 
   <!-- Contact -->
-  <section id="raskcon" class="w-100">
+  <div id="raskcon">
     <div id="videowrapper">
       <div id="fullScreenDiv">
         <video id="video" role="presentation" preload="auto" playsinline="" loop="true" muted="true" autoplay="true"
           class="blur">
           <source src="./assets/media/epic_walk.mp4" type="video/mp4">
+          <description class="text-center">Your browser does not support the video tag.</description>
+          <track kind="captions" label="English" srclang="en" src="assets/media/top.vtt" default>
         </video>
         <div id="videoMessage" class="styling">
           <h1>Contact</h1>
           <h2 class="text-center space-me">If you need help, use the button below. You'll receive a answer shortly.</h2>
           <div class="space-me"></div>
-          <p class="text-center space-me " data-aos="zoom-in" data-aos-duration="1000"><button
-              class="btn btn-primary btn-lg shadow" id="feedback-form">Click here to send Feedback</button></p>
+          <p class="text-center space-me " data-aos="zoom-in" data-aos-duration="1000">
+            <button class="btn btn-primary btn-lg shadow" id="feedback-form">Click here to send Feedback</button>
+          </p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+
+  </div>
+<!-- End site content -->
 
   <!-- Footer -->
   <footer class="bg-dark text-center text-white">
@@ -284,35 +278,39 @@
       <!-- Section: Social media -->
       <div class="mb-4">
         <!-- Facebook -->
-        <a class="btn btn-outline-light btn-floating m-1" href="https://facebook.com/raskitoma" role="button"><i
-            class="fa-brands fa-facebook"></i></i></a>
+        <a class="btn btn-outline-light btn-floating m-1" href="https://facebook.com/raskitoma" role="button" title="Facebook">
+          <i class="bi bi-facebook"></i>
+        </a>
 
         <!-- Twitter -->
-        <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/wantan" role="button"><i
-            class="fa-brands fa-twitter"></i></a>
+        <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/wantan" role="button" title="Twitter">
+          <i class="bi bi-twitter"></i>
+        </a>
 
-        <!-- Google -->
-        <a class="btn btn-outline-light btn-floating m-1" href="https://youtube.com/c/raskitoma" role="button"><i
-            class="fa-brands fa-youtube"></i></a>
+        <!-- Youtube -->
+        <a class="btn btn-outline-light btn-floating m-1" href="https://youtube.com/c/raskitoma" role="button" title="Youtube">
+          <i class="bi bi-youtube"></i>
+        </a>
 
         <!-- Instagram -->
-        <a class="btn btn-outline-light btn-floating m-1" href="https://instagram.com/wantan" role="button"><i
-            class="fa-brands fa-instagram"></i></a>
-
+        <a class="btn btn-outline-light btn-floating m-1" href="https://instagram.com/wantan" role="button" title="Instagram">
+          <i class="bi bi-instagram"></i>
+        </a>
         <!-- Linkedin -->
-        <a class="btn btn-outline-light btn-floating m-1" href="https://twitch.tv/raskitoma" role="button"><i
-            class="fa-brands fa-twitch"></i></a>
-
+        <a class="btn btn-outline-light btn-floating m-1" href="https://twitch.tv/raskitoma" role="button" title="Linkedin">
+          <i class="bi bi-twitch"></i>
+        </a>
         <!-- Github -->
-        <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/raskitoma" role="button"><i
-            class="fa-brands fa-github"></i></a>
+        <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/raskitoma" role="button" title="Github">
+          <i class="bi bi-github"></i>
+        </a>
       </div>
       <!-- Section: Social media -->
     </div>
     <!-- Grid container -->
 
     <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    <div class="text-center p-3 small">
       © 2022 Copyright:
       <a class="text-white" href="https://raskitoma.com/">raskitoma.com</a>
     </div>
@@ -320,28 +318,25 @@
   </footer>
 
   <!-- Scroll to top -->
-  <button type="button" class="btn btn-light rounded-pill btn-floating btn-lg" id="btn-back-to-top">
-    <i class="fa-solid fa-circle-arrow-up"></i>
+  <button type="button" class="btn btn-light rounded-pill btn-floating btn-lg shadow" id="btn-back-to-top">
+    <i class="bi bi-arrow-up-circle-fill"></i>
   </button>
 
   <!-- Button that shows when user doesn't scroll down at center -->
   <button type="button" class="btn btn-light rounded-pill btn-floating btn-lg" id="btn-scroll">
-    <i class="fa-solid fa-circle-arrow-down"></i>
+    <i class="bi bi-arrow-down-circle-fill"></i>
   </button>
 
-  <!-- Messenger Chat Plugin Code -->
+  <!-- FB Chat code -->
   <div id="fb-root"></div>
-
-  <!-- Your Chat Plugin code -->
-  <div id="fb-customer-chat" class="fb-customerchat">
-  </div>
+  <div id="fb-customer-chat" class="fb-customerchat"></div>
+  <!-- Required Script Loading -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script id="zammad_form_script" src="https://support.raskitoma.com/assets/form/form.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.js"></script> -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="./assets/js/siteapp.js"></script>
   <script src="./assets/js/siteani.js"></script>

@@ -22,6 +22,7 @@ body {
   font-family: "Raleway", sans-serif;
   position: relative;
   background: black;
+  margin: 0px;
 }
 
 .txtcaveat {
@@ -82,10 +83,6 @@ section .projects div {
   max-width: 540px;
 }
 
-section .space-me {
-  padding-top: 100px;
-}
-
 section .aografobia-1 {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -111,25 +108,12 @@ section .aografobia-5 {
   padding-bottom: 250px;
 }
 
-
-
-section .projectimg {
-  fill-opacity: inherit;
-  width: 150px;
-  height: auto;
-}
-
-section .sectionspacer {
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-
-section h1 {
-  text-shadow: 3px 3px 10px rgba(0,0,0,0.5);
+.card-img-size {
+  max-width: 50px;
 }
 
 .captionbg {
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(255,255,255,0.9);
 }
 
 .gamerimg {
@@ -161,10 +145,11 @@ section h1 {
   left: 20px;
   display: block;
   -webkit-animation: bounce 0.75s infinite;
+    animation: bounce 0.75s infinite;
   z-index: 99;
 }
  
-@-webkit-keyframes bounce {
+@keyframes bounce {
   0% { transform: scale(1,1) translate(0px, 0px); }
   30%{ transform: scale(1,0.8) translate(0px, 10px); }
   75%{ transform: scale(1,1.1) translate(0px, -25px); }
@@ -205,7 +190,6 @@ section h1 {
   background-color: black;
   color: rgba(255, 255, 255, 0.75);
 }
-
 
 /* Form button styling */
 .zammad-form .btn {
@@ -309,7 +293,6 @@ section h1 {
   display: flex;
   align-items: center;
   background: rgba(255, 255, 255, 0.55);
-  background: rgba(255, 255, 255, 0.55);
   box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
   border-radius: 2rem;
   border: 1px solid rgba(255, 255, 255, 0.125);
@@ -330,6 +313,8 @@ section h1 {
     var(--complimentary2)
   );
   -webkit-animation: gradiantme 5s infinite;
+  -moz-animation: gradiantme 5s infinite;
+  animation: gradiantme 5s infinite;
 }
 
 @keyframes gradiantme {
@@ -339,8 +324,8 @@ section h1 {
 }
 
 .overlay__description {
-  font-size: 1.75rem;
-  line-height: 1.75rem;
+  font-size: 2.75rem;
+  line-height: 2.75rem;
   margin-bottom: 3rem;
   overflow: hidden;
 }
@@ -395,7 +380,7 @@ section h1 {
   .overlay {
     padding: 8rem 4rem;
   }
-
+}
 
 @media only screen and (max-width: 840px) {
   .overlay {
